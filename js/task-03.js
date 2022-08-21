@@ -18,7 +18,7 @@ const galleryEl = document.querySelector('.gallery');
 const makeItemGallery = ({ url, alt }) => {
   return `
   <li class="gallery__item">
-    <img class="gallery__img" src='${url}' alt='${alt}' width="300">
+    <img class="gallery__img" src='${url}' alt='${alt}'  height='150'>
     </img>
   </li>
   `;
@@ -29,10 +29,8 @@ const makeListGallery = images.map(makeItemGallery).join('');
 galleryEl.insertAdjacentHTML('afterbegin', makeListGallery);
 
 galleryEl.style.cssText = `
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
   gap: 30px;
-  list-style: none;
-`;
+  `;
