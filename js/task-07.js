@@ -1,10 +1,10 @@
-const inputRef = document.querySelector('#font-size-control');
-const textRef = document.querySelector('#text');
+const inputEl = document.querySelector('#font-size-control');
+const textEl = document.querySelector('#text');
 
-function onInputChange(event) {
+const inputChange = (event) => {
   const inputCurrentValue = event.currentTarget.value;
 
-  textRef.style.fontSize = `${inputCurrentValue}px`;
+  textEl.style.fontSize = `${inputCurrentValue}px`;
 }
 
-inputRef.addEventListener('input', onInputChange);
+inputEl.addEventListener('input', inputChange);
