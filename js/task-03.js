@@ -13,6 +13,12 @@ const images = [
   },
 ];
 
+
+
+
+
+
+
 const galleryEl = document.querySelector('.gallery');
 
 const makeItemGallery = ({ url, alt }) => {

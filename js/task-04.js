@@ -3,17 +3,16 @@ const incrementRef = document.querySelector('[data-action="increment"]');
 const valueRef = document.querySelector('#value');
 
 let counterValue = 0;
-console.log(counterValue);
 
-const onDecrementBtnClick = () => {
+const plusBtnClick = () => {
   counterValue -= 1;
   valueRef.textContent = `${counterValue}`;
 };
 
-const onIncrementBtnClick = () => {
+const minusBtnClick = () => {
   counterValue += 1;
   valueRef.textContent = `${counterValue}`;
 };
 
-decrementRef.addEventListener('click', onDecrementBtnClick);
-incrementRef.addEventListener('click', onIncrementBtnClick);
+decrementRef.addEventListener('click', plusBtnClick);
+incrementRef.addEventListener('click', minusBtnClick);
