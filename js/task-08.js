@@ -1,12 +1,12 @@
-const formRef = document.querySelector('.login-form');
+const formEl = document.querySelector('.login-form');
 
-function onFormSubmit(event) {
+const formSubmit = event => {
   event.preventDefault();
 
   const { email, password } = event.currentTarget.elements;
 
   if (email.value === '' || password.value === '') {
-    alert('All fields must be filled!');
+    alert('You must fill in all fields!');
   } else {
     const userObj = {
       email: email.value,
@@ -19,4 +19,4 @@ function onFormSubmit(event) {
   }
 }
 
-formRef.addEventListener('submit', onFormSubmit);
+formEl.addEventListener('submit', formSubmit);
